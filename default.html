@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src=bower_components/angular/angular.js></script>
+	<script src=dist/deferred.js></script>
+</head>
+<body ng-app=. ng-controller=.>
+	<deferred:var>
+		<timeout value=42 interval=1000 name=x></timeout>
+		<http url=http://jsonplaceholder.typicode.com/posts/{{id}} name=post></http>
+	</deferred:var>
+	<button ng-click="$deferred.start('x');">start x</button>
+	<button ng-click="$deferred.reset('x');">reset x</button><br>
+	<button ng-click="$deferred.start('post');">start post</button>
+	<div>
+		<deferred name=x>
+			<deferred:replace></deferred:replace>
+		</deferred>
+		{{x}}
+	</div>
+	<div>
+		<deferred name=post>
+			<deferred:replace></deferred:replace>
+		</deferred>
+		<h4>{{post.title}}</h4>
+		<p>{{post.body}}</p>
+	</div>
+	<script>
+		angular.module('.', ['deferred'])
+			.controller('.', function ($scope, $timeout, $http) {
+				$scope.id = 1;
+			});
+	</script>
+</body>
+</html>

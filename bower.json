@@ -1,0 +1,21 @@
+{
+  "name": "angular-deferred",
+  "homepage": "https://github.com/panlina/angular-deferred",
+  "authors": [
+    "Jack Lu <jacklu@jacklu.me>"
+  ],
+  "description": "an angular module for managing deferred values",
+  "keywords": [
+    "angular",
+    "deferred"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "*"
+  }
+}

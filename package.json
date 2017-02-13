@@ -1,0 +1,7 @@
+{
+  "name": "angular-deferred",
+  "version": "0.0.0",
+  "devDependencies": {
+    "gulp-concat": "^2.6.1"
+  }
+}
